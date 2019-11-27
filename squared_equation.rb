@@ -1,21 +1,20 @@
-class SquaredEquation
-	puts "Введите 1-ый коэффициент"
-	a = gets.chomp
+	puts 'Введите 1-ый коэффициент'
+	a = gets.chomp.to_f
 
-	puts "Введите 2-ой коэффициент"
-	b = gets.chomp
+	puts 'Введите 2-ой коэффициент'
+	b = gets.chomp.to_f
 
-	puts "Введите 3-ий коэффициент"
-	c = gets.chomp
+	puts 'Введите 3-ий коэффициент'
+	c = gets.chomp.to_f
 
-	d = (b.to_i**2) - (4 * a.to_i*c.to_i)
-	
-if d >= 0
-	x1 = (-b.to_i + (Math.sqrt(d))) / (2 * a.to_i)
-	x2 = (-b.to_i - (Math.sqrt(d))) / (2 * a.to_i)
-	puts "x1:#{x1}, x2: #{x2}, D: #{d}"
-else
-	puts "Корней нет"
-end
+	d = (b**2) - (4 * a * c)
 
-end
+	if d > 0
+		x1 = (-b + (Math.sqrt(d))) / (2 * a)
+		x2 = (-b - (Math.sqrt(d))) / (2 * a)
+		puts "x1:#{x1}, x2: #{x2}, D: #{d}"
+	elsif d == 0
+		x2 = (-b) / (2 * a)
+	else
+		puts 'Корней нет'
+	end

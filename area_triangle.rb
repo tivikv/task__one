@@ -1,12 +1,10 @@
-class AreaTriangle
-	puts "Ввести длину основания треугольника"
-	a = gets.chomp
+puts 'Ввести длину основания треугольника'
+a = gets.chomp.to_f
 
-	puts "Ввести длину высоты треугольника"
-	h = gets.chomp
+puts 'Ввести длину высоты треугольника'
+h = gets.chomp.to_f
 
-	S = 0.5 * a.to_i * h.to_i
 
-	puts "#{S}"
+s = 0.5 * a * h
 
-end
+puts "#{s}"
